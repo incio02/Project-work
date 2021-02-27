@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="container-fluid">
-
         <header>
             <div class="row">
                 <div class="col-md-2">
@@ -29,7 +28,7 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
                             <a class="nav-item nav-link" href="/">Home</a>
-                            <a class="nav-item nav-link" href="~/Views/Home/Calcio.cshtml">Calcio</a>
+                            <a class="nav-item nav-link" href="/home/Calcio">Calcio</a>
                             <a class="nav-item nav-link" href="#">Basket</a>
                             <a class="nav-item nav-link" href="#">Formula 1</a>
                             <a class="nav-item nav-link" href="#">MotoGp</a>
@@ -38,9 +37,9 @@
                 </nav>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                 </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 @RenderBody()
             </div>
         </div>
@@ -52,6 +51,7 @@
             </div>
         </footer>
 
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
