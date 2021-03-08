@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\Formula1\Formula1Controller.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -109,6 +110,20 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Layout\Layout.cshtml" />
     <Content Include="Views\Home\Calcio.cshtml" />
+    <Content Include="Views\Home\Basket.cshtml" />
+    <Content Include="Views\Home\Formula1.cshtml" />
+    <Content Include="Views\Home\MotoGp.cshtml" />
+    <Content Include="Views\Formula1\Ferrari.cshtml" />
+    <Content Include="Views\Formula1\Team.cshtml" />
+    <Content Include="Views\Formula1\Mercedes.cshtml" />
+    <Content Include="Views\Formula1\RedBull.cshtml" />
+    <Content Include="Views\Formula1\AstonMartin.cshtml" />
+    <Content Include="Views\Formula1\McLaren.cshtml" />
+    <Content Include="Views\Formula1\Alpine.cshtml" />
+    <Content Include="Views\Formula1\AlphaTauri.cshtml" />
+    <Content Include="Views\Formula1\AlfaRomeo.cshtml" />
+    <Content Include="Views\Formula1\Haas.cshtml" />
+    <Content Include="Views\Formula1\Williams.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -19,5 +19,17 @@ namespace SideLine.Controllers.Home
         {
             return View();
         }
+        public ActionResult Basket()
+        {
+            return View();
+        }
+        public ActionResult Formula1()
+        {
+            return View();
+        }
+        public ActionResult MotoGp()
+        {
+            return View();
+        }
     }
 }
