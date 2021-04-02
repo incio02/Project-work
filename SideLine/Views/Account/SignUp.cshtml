@@ -1,0 +1,76 @@
+﻿@model SideLine.Models.Views.SignUpViewModel
+
+@{
+    Layout = "~/Views/Layout/Layout.cshtml";
+}
+
+<h2>@Model.LabelTitolo</h2>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+@using (Html.BeginForm("SignUp", "Account", FormMethod.Post))         
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        <label>@Model.LabelNome </label><br />
+        @Html.TextBoxFor(t => t.Utente.Nome, new { placeholder = Model.LabelNome })
+        @Html.ValidationMessageFor(t => t.Utente.Nome)
+        <br />
+    </div>
+    <div class="form-group">
+        <label>@Model.LabelCognome </label><br />
+        @Html.TextBoxFor(t => t.Utente.Cognome, new { placeholder = Model.LabelCognome })
+        @Html.ValidationMessageFor(t => t.Utente.Cognome)
+        <br />
+    </div>
+    <div class="form-group">
+        <label>@Model.LabelEmail </label><br />
+        @Html.TextBoxFor(t => t.Utente.Email, new { placeholder = Model.LabelEmail, type = "email" })
+        @Html.ValidationMessageFor(t => t.Utente.Email)
+        <br />
+    </div>
+    <div class="form-group">
+        <label>@Model.LabelPassword</label><br />
+        @Html.PasswordFor(t => t.Password, new { placeholder = Model.LabelPassword })
+        @Html.ValidationMessageFor(t => t.Password)
+        <br />
+    </div>
+    <div class="form-group">
+        <label>@Model.LabelConfermaPassword</label><br />
+        @Html.PasswordFor(t => t.ConfermaPassword, new { placeholder = Model.LabelConfermaPassword })
+        @Html.ValidationMessageFor(t => t.ConfermaPassword)
+        <br />
+    </div>
+    <div class="form-group">
+        <label>@Model.LabelSesso </label><br />
+        @Html.TextBoxFor(t => t.Utente.Sesso, new { placeholder = Model.LabelSesso })
+        @Html.ValidationMessageFor(t => t.Utente.Sesso)
+        <br />
+    </div>
+    <div class="form-group">
+        <label>@Model.LabelDataNascita </label><br />
+        @Html.TextBoxFor(t => t.Utente.Data_nascita, new { placeholder = Model.LabelDataNascita })
+        @Html.ValidationMessageFor(t => t.Utente.Data_nascita)
+        <br />
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            @Html.CheckBoxFor(t => t.Utente.Privacy, new { @class = "form-check-input" })
+            @Html.LabelFor(t => t.LabelPrivacy, new { @class = "form-check-label", @for = "@Model.Utente.Privacy" })
+            @Html.ValidationMessageFor(t => t.Utente.Privacy)
+        </div>
+    </div>
+    <input type="submit" value="@Model.BtnRegistrazione" />
+    if (!string.IsNullOrWhiteSpace(Model.Messaggio))
+    {
+        <span class="alert alert-@(Model.IsSuccesso?"success":"danger")">@Html.Raw(Model.Messaggio)</span>
+    }
+}
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+

@@ -1,3 +1,4 @@
+using SideLine.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace SideLine
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            DatabaseHelper.InitConnectionString();
         }
     }
 }
