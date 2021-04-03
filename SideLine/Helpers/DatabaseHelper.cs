@@ -22,23 +22,23 @@ namespace SideLine.Helpers
         {
             using (var connection = new MySqlConnection(_connectionString))
             {
-                var sql = "SELECT id FROM utenti WHERE email=@email ";
+                var sql = "SELECT id FROM utenti WHERE email=@email and password <>'' ";
                 var id = connection.Query<int>(sql, new { email }).FirstOrDefault();
                 return id > 0;
             }
 
         }
 
-        public static int InsertUtente(Utenti utente)
+        public static int InsertUtente(Utenti utenti)
         {
             var id = 0;
             try
             {
                 using (var connection = new MySqlConnection(_connectionString))
                 {
-                    var sql = "INSERT INTO utenti(nome,cognome,email,password,sesso,data_nascita,privacy) " +
-                    "VALUES(@nome,@cognome,@email,@password,@sesso,@data_nascita,1); SELECT CAST(LAST_INSERT_ID() as int);";
-                    id = connection.Query<int>(sql, utente).First();
+                    var sql = "INSERT INTO utenti(nome, cognome, email, password, sesso, privacy) " +
+                    "VALUES(@nome,@cognome,@email,@password,@sesso,1); "+"SELECT LAST_INSERT_ID();";
+                    id = connection.Query<int>(sql, utenti).First();
                 }
             }
             catch (Exception ex)

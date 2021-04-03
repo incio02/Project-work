@@ -8,6 +8,7 @@ namespace SideLine.Models.Entity
 {
     public class Utenti
     {
+        public int Id { get; set; }
         [Required]
         public string Nome { get; set; }
         [Required]
@@ -18,7 +19,6 @@ namespace SideLine.Models.Entity
         [Required]
         public string Password { get; set; }
         public string Sesso { get; set; }
-        public string Data_nascita { get; set; }
         [Range(typeof(bool), "true", "true", ErrorMessage = "Per registrarsi bisogna accettare la privacy")]
         public bool Privacy { get; set; }
     }

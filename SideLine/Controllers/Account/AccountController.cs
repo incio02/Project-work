@@ -14,10 +14,10 @@ namespace SideLine.Controllers
         public ActionResult SignUp()
         {
             var model = new SignUpViewModel();
-            SetSignUpViewModelLabels(model);
+            SetLabels(model);
             return View(model);
         }
-        private void SetSignUpViewModelLabels(SignUpViewModel model)
+        private void SetLabels(SignUpViewModel model)
         {
             ViewBag.Title = model.LabelTitolo = "Registrazione";
             model.LabelConfermaPassword = "Conferma password";
@@ -26,9 +26,8 @@ namespace SideLine.Controllers
             model.LabelCognome = "Cognome";
             model.LabelPassword = "Password";
             model.LabelSesso = "Sesso";
-            model.LabelDataNascita = "Data di nascita";
             model.BtnRegistrazione = "Registrati";
-            model.LabelPrivacy = "Accetta la privacy/n";
+            model.LabelPrivacy = "Accetta la privacy";
             model.LabelSport = "Sport preferito";
             model.LabelSquadra = "Squadra preferita";
         }
@@ -37,7 +36,7 @@ namespace SideLine.Controllers
         {
             ModelState.Remove("Utente.password");
 
-            SetSignUpViewModelLabels(model);
+            SetLabels(model);
             if (ModelState.IsValid)
             {
                 if (model.Utente.Privacy == false)
@@ -49,30 +48,21 @@ namespace SideLine.Controllers
 
                 if (DatabaseHelper.ExistUtenteByEmail(model.Utente.Email))
                 {
-                    model.Messaggio = "Questa Email è già esistente nel database";
+                    model.Messaggio = "Questa Email è già esistente nel database. Recupera la password";
                     model.IsSuccesso = false;
                     return View(model);
                 }
                 var id = DatabaseHelper.InsertUtente(model.Utente);
-                if (id > 0)
-                {
-                    model.Utente.Password = CryptoHelper.AshSHA256(id+ model.Password);
-                    bool result = DatabaseHelper.UpdatePassword(id, model.Utente.Password);
-                    if (result)
-                    {
-
-                    }
-                }
             }
 
             else
             {
-                model.Messaggio = "Completa correttamente tutti i campi";
+                model.Messaggio = "Completa correttamente tutti i campi<br>";
                 foreach (var value in ModelState.Values)
                 {
                     foreach (var error in value.Errors)
                     {
-                        model.Messaggio += "<br> " + error.ErrorMessage;
+                        model.Messaggio += $"{error.ErrorMessage}<br>";
                     }
                 }
                 model.IsSuccesso = false;

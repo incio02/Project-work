@@ -150,7 +150,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\CryptoHelper.cs" />
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Models\Entity\Utenti.cs" />
     <Compile Include="Models\Views\SignUpViewModel.cs" />
