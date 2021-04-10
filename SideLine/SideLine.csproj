@@ -145,6 +145,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\calcio\CalcioController.cs" />
     <Compile Include="Controllers\Formula1\Formula1Controller.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
     <Compile Include="Controllers\motogp\MotogpController.cs" />
@@ -245,6 +246,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Calcio\Bundesliga\" />
+    <Folder Include="Views\Calcio\ChampionsLeague\" />
+    <Folder Include="Views\Calcio\EuropaLeague\" />
+    <Folder Include="Views\Calcio\LaLiga\" />
+    <Folder Include="Views\Calcio\Ligue1\" />
+    <Folder Include="Views\Calcio\PremierLeague\" />
+    <Folder Include="Views\Calcio\SerieA\" />
+    <Folder Include="Views\Calcio\SerieB\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
