@@ -61,5 +61,29 @@ namespace SideLine.Controllers.calcio
         {
             return View();
         }
+
+            [HttpGet]
+            public ActionResult Inter()
+            {
+                return View();
+            }
+
+            [HttpGet]
+            public ActionResult Atalanta()
+            {
+                return View();
+            }
+
+            [HttpGet]
+            public ActionResult Milan()
+            {
+                return View();
+            }
+
+            [HttpGet]
+            public ActionResult Juventus()
+            {
+                return View();
+            }
     }
 }
