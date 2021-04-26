@@ -13,77 +13,15 @@ namespace SideLine.Controllers.calcio
         {
             return View();
         }
-
         [HttpGet]
-        public ActionResult SerieA()
+        public ActionResult Campionato(string nome)
         {
             return View();
         }
-
         [HttpGet]
-        public ActionResult SerieB()
+        public ActionResult Squadra(string nome)
         {
             return View();
         }
-
-        [HttpGet]
-        public ActionResult PremierLeague()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult Bundesliga()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult Ligue1()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult LaLiga()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult ChampionsLeague()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public ActionResult EuropaLeague()
-        {
-            return View();
-        }
-
-            [HttpGet]
-            public ActionResult Inter()
-            {
-                return View();
-            }
-
-            [HttpGet]
-            public ActionResult Atalanta()
-            {
-                return View();
-            }
-
-            [HttpGet]
-            public ActionResult Milan()
-            {
-                return View();
-            }
-
-            [HttpGet]
-            public ActionResult Juventus()
-            {
-                return View();
-            }
     }
 }

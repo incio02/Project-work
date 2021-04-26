@@ -52,7 +52,13 @@ namespace SideLine.Controllers
                     model.IsSuccesso = false;
                     return View(model);
                 }
+                model.Utente.Password = model.Password;
                 var id = DatabaseHelper.InsertUtente(model.Utente);
+                if (id == 0)
+                {
+                    model.Messaggio = "Errore del server";
+                }
+             
             }
 
             else
