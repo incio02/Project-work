@@ -75,5 +75,39 @@ namespace SideLine.Controllers
             }
             return View(model);
         }
+        [HttpGet]
+        public ActionResult Login()
+        {
+            var model = new LoginViewModel();
+            SetLoginViewModelLabels(model);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginViewModel model)
+        {
+            SetLoginViewModelLabels(model);
+            if (!ModelState.IsValid)
+                return View(model);
+            var utente = DatabaseHelper.GetUtenteByEmail(model.Email);
+            if (utente == null ||  model.Password != utente.Password)
+            {
+                model.MessaggioErrore = "Email e password non coincidono";
+                return View(model);
+            }
+
+
+            Session["UtenteLoggato"] = utente;
+            return RedirectToAction("Index", "AreaRiservata");
+        }
+
+
+        private void SetLoginViewModelLabels(LoginViewModel model)
+        {
+            ViewBag.Title = model.LabelTitoloLogin = "Login";
+            model.LabelEmail = "Indirizzo mail";
+            model.LabelPassword = "Password";
+            model.LabelButtonInvia = "Entra";
+        }
     }
 }

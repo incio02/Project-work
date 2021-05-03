@@ -154,6 +154,7 @@
     </Compile>
     <Compile Include="Helpers\DatabaseHelper.cs" />
     <Compile Include="Models\Entity\Utenti.cs" />
+    <Compile Include="Models\Views\LoginViewModel.cs" />
     <Compile Include="Models\Views\SignUpViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -237,6 +238,7 @@
     <Content Include="Views\Motogp\Circuiti\GPAustralia.cshtml" />
     <Content Include="Views\Motogp\Circuiti\GPMalesia.cshtml" />
     <Content Include="Views\Motogp\Circuiti\GPValencia.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
