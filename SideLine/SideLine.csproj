@@ -154,9 +154,19 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="Models\Entity\Campionati.cs" />
+    <Compile Include="Models\Entity\Città.cs" />
+    <Compile Include="Models\Entity\Classifica.cs" />
+    <Compile Include="Models\Entity\Membri.cs" />
+    <Compile Include="Models\Entity\Partecipanti.cs" />
+    <Compile Include="Models\Entity\Societa_sportiva.cs" />
+    <Compile Include="Models\Entity\Sport.cs" />
     <Compile Include="Models\Entity\Utenti.cs" />
+    <Compile Include="Models\Entity\Eventi_Sportivi.cs" />
+    <Compile Include="Models\Views\CampionatoView.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
     <Compile Include="Models\Views\SignUpViewModel.cs" />
+    <Compile Include="Models\Views\SquadraView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +250,8 @@
     <Content Include="Views\Motogp\Circuiti\GPMalesia.cshtml" />
     <Content Include="Views\Motogp\Circuiti\GPValencia.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Calcio\Campionato.cshtml" />
+    <Content Include="Views\Calcio\Squadra.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -250,14 +262,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Basket\" />
-    <Folder Include="Views\Calcio\Bundesliga\" />
-    <Folder Include="Views\Calcio\ChampionsLeague\" />
-    <Folder Include="Views\Calcio\EuropaLeague\" />
-    <Folder Include="Views\Calcio\LaLiga\" />
-    <Folder Include="Views\Calcio\Ligue1\" />
-    <Folder Include="Views\Calcio\PremierLeague\" />
-    <Folder Include="Views\Calcio\SerieA\" />
-    <Folder Include="Views\Calcio\SerieB\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

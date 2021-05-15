@@ -74,19 +74,19 @@
                 <br />
             </div>
         </div>
-    </div>
+    </div>/*
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
                 <label>@Model.LabelSquadra </label><br />
                 @Html.DropDownListFor(t => t.Utente.FKSquadre, new List<SelectListItem>
-                {new SelectListItem{Text="Atalanta", Value="1"},
+                {new SelectListItem{Text="Atalanta", Value=Convert.ToInt32("1")},
                      new SelectListItem{Text="Femmina", Value="Femmina"}}, "Seleziona Squadra")
                 @Html.ValidationMessageFor(t => t.Utente.Sesso)
                 <br />
             </div>
         </div>
-    </div>
+    </div>*/
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">

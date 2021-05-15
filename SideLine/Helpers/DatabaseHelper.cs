@@ -22,7 +22,7 @@ namespace SideLine.Helpers
         {
             using (var connection = new MySqlConnection(_connectionString))
             {
-                var sql = "SELECT id FROM utenti WHERE email=@email and password <>'' ";
+                var sql = "SELECT ID FROM utenti WHERE email=@email and password <>''";
                 var id = connection.Query<int>(sql, new { email }).FirstOrDefault();
                 return id > 0;
             }
@@ -37,13 +37,13 @@ namespace SideLine.Helpers
                 using (var connection = new MySqlConnection(_connectionString))
                 {
                     var sql = "INSERT INTO utenti(nome, cognome, email, password, sesso, privacy) " +
-                    "VALUES(@nome,@cognome,@email,@password,@sesso,1); "+"SELECT LAST_INSERT_ID();";
+                    "VALUES (@nome,@cognome,@email,@password,@sesso,1); "+"SELECT LAST_INSERT_ID()";
                     id = connection.Query<int>(sql, utenti).First();
                 }
             }
             catch (Exception ex)
             {
-
+                return 0;
             }
             return id;
         }
