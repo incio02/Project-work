@@ -14,12 +14,12 @@ namespace SideLine.Controllers.calcio
             return View();
         }
         [HttpGet]
-        public ActionResult Campionato(string nome)
+        public ActionResult Campionato(int id)
         {
             return View();
         }
         [HttpGet]
-        public ActionResult Squadra(string nome)
+        public ActionResult Squadra(int id)
         {
             return View();
         }

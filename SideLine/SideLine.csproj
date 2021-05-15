@@ -145,6 +145,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\Basket\BasketController.cs" />
     <Compile Include="Controllers\calcio\CalcioController.cs" />
     <Compile Include="Controllers\Formula1\Formula1Controller.cs" />
     <Compile Include="Controllers\Home\HomeController.cs" />
@@ -248,6 +249,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Basket\" />
     <Folder Include="Views\Calcio\Bundesliga\" />
     <Folder Include="Views\Calcio\ChampionsLeague\" />
     <Folder Include="Views\Calcio\EuropaLeague\" />

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SideLine.Controllers.Formula1
+namespace SideLine.Controllers.Basket
 {
-    public class Formula1Controller : Controller
+    public class BasketController : Controller
     {
         [HttpGet]
         public ActionResult Index()
@@ -14,12 +14,12 @@ namespace SideLine.Controllers.Formula1
             return View();
         }
         [HttpGet]
-        public ActionResult Circuito(int id)
+        public ActionResult Campionato(int id)
         {
             return View();
         }
         [HttpGet]
-        public ActionResult Scuderia(int id)
+        public ActionResult Squadra(int id)
         {
             return View();
         }
