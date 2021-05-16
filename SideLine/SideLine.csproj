@@ -164,6 +164,7 @@
     <Compile Include="Models\Entity\Utenti.cs" />
     <Compile Include="Models\Entity\Eventi_Sportivi.cs" />
     <Compile Include="Models\Views\CampionatoView.cs" />
+    <Compile Include="Models\Views\HomeViewModel.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
     <Compile Include="Models\Views\SignUpViewModel.cs" />
     <Compile Include="Models\Views\SquadraView.cs" />
@@ -179,79 +180,18 @@
     <Content Include="Views\Home\Basket.cshtml" />
     <Content Include="Views\Home\Formula1.cshtml" />
     <Content Include="Views\Home\MotoGp.cshtml" />
-    <Content Include="Views\Formula1\Team\Ferrari.cshtml" />
     <Content Include="Views\Formula1\Team.cshtml" />
-    <Content Include="Views\Formula1\Team\Mercedes.cshtml" />
-    <Content Include="Views\Formula1\Team\RedBull.cshtml" />
-    <Content Include="Views\Formula1\Team\AstonMartin.cshtml" />
-    <Content Include="Views\Formula1\Team\McLaren.cshtml" />
-    <Content Include="Views\Formula1\Team\Alpine.cshtml" />
-    <Content Include="Views\Formula1\Team\AlphaTauri.cshtml" />
-    <Content Include="Views\Formula1\Team\AlfaRomeo.cshtml" />
-    <Content Include="Views\Formula1\Team\Haas.cshtml" />
-    <Content Include="Views\Formula1\Team\Williams.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Formula1\Circuiti.cshtml" />
     <Content Include="Views\Account\SignUp.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPBahrain.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPEmiliaRomagna.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPPortogallo.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPSpagna.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPMontecarlo.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPAzerbaijan.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPCanada.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPFrancia.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPAustria.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPGranBretagnaView.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPUngheria.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPBelgio.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPOlanda.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPItalia.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPRussia.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPSingapore.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPGiappone.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPStatiUniti.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPMessico.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPBrasile.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPAustralia.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPArabiaSaudita.cshtml" />
-    <Content Include="Views\Formula1\Circuiti\GPAbuDhabi.cshtml" />
     <Content Include="Views\Motogp\Circuiti.cshtml" />
     <Content Include="Views\Motogp\Team.cshtml" />
-    <Content Include="Views\Motogp\Team\Aprilia.cshtml" />
-    <Content Include="Views\Motogp\Team\Ducati.cshtml" />
-    <Content Include="Views\Motogp\Team\Esponsorama.cshtml" />
-    <Content Include="Views\Motogp\Team\LCRHonda.cshtml" />
-    <Content Include="Views\Motogp\Team\Yamaha.cshtml" />
-    <Content Include="Views\Motogp\Team\YamahaSRT.cshtml" />
-    <Content Include="Views\Motogp\Team\Pramac.cshtml" />
-    <Content Include="Views\Motogp\Team\KTM.cshtml" />
-    <Content Include="Views\Motogp\Team\Honda.cshtml" />
-    <Content Include="Views\Motogp\Team\Suzuki.cshtml" />
-    <Content Include="Views\Motogp\Team\Tech3.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPQatar.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPDoha.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPPortogallo.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPSpagna.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPFrancia.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPItalia.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPCatalunya.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPGermania.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPPaesiBassi.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPFinlandia.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPAustria.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPGranBretagna.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPAragon.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPSanMarino.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPGiappone.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPThailandia.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPAustralia.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPMalesia.cshtml" />
-    <Content Include="Views\Motogp\Circuiti\GPValencia.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Calcio\Campionato.cshtml" />
     <Content Include="Views\Calcio\Squadra.cshtml" />
+    <Content Include="Views\Basket\Campionato.cshtml" />
+    <Content Include="Views\Basket\Squadra.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -261,7 +201,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Basket\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -73,6 +73,26 @@ namespace SideLine.Helpers
             }
 
         }
+        public static List<Classifica> GetClassifica(int fk_campionato)
+        {
+            var classifica=new List<Classifica>();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                var sql = "SELECT * FROM classifica WHERE fk campionati=@fk_campionato ORDER BY posizione classifica ";
+                classifica=connection.Query<Classifica>(sql, new { fk_campionato }).ToList();
+            }
+            return classifica;
+        }
+        public static Società_sportiva GetSquadra(int id)
+        {
+            var squadra=new Società_sportiva();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                var sql = "SELECT * FROM società sportiva WHERE id=@id ";
+                squadra = connection.Query<Società_sportiva>(sql, new { id }).FirstOrDefault();
+            }
+            return squadra;
+        }
         public static bool UpdateNome(int id, string nome)
         {
             try

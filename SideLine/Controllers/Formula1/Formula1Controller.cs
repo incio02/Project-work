@@ -13,13 +13,20 @@ namespace SideLine.Controllers.Formula1
         {
             return View();
         }
+        
         [HttpGet]
-        public ActionResult Circuito(int id)
+        public ActionResult Circuiti()
         {
             return View();
         }
         [HttpGet]
-        public ActionResult Scuderia(int id)
+        public ActionResult Team()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Campionato()
         {
             return View();
         }

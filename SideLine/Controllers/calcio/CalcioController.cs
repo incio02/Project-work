@@ -16,7 +16,8 @@ namespace SideLine.Controllers.calcio
         [HttpGet]
         public ActionResult Campionato(int id)
         {
-            return View();
+            id = 1;
+            return View(id);
         }
         [HttpGet]
         public ActionResult Squadra(int id)
