@@ -154,6 +154,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DatabaseHelper.cs" />
+    <Compile Include="Helpers\PathHelper.cs" />
     <Compile Include="Models\Entity\Campionati.cs" />
     <Compile Include="Models\Entity\Città.cs" />
     <Compile Include="Models\Entity\Classifica.cs" />
@@ -163,7 +164,7 @@
     <Compile Include="Models\Entity\Sport.cs" />
     <Compile Include="Models\Entity\Utenti.cs" />
     <Compile Include="Models\Entity\Eventi_Sportivi.cs" />
-    <Compile Include="Models\Views\CampionatoView.cs" />
+    <Compile Include="Models\Views\CampionatoViewModel.cs" />
     <Compile Include="Models\Views\HomeViewModel.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
     <Compile Include="Models\Views\SignUpViewModel.cs" />
@@ -192,6 +193,8 @@
     <Content Include="Views\Calcio\Squadra.cshtml" />
     <Content Include="Views\Basket\Campionato.cshtml" />
     <Content Include="Views\Basket\Squadra.cshtml" />
+    <Content Include="Views\Formula1\Campionato.cshtml" />
+    <Content Include="Views\Motogp\Campionato.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

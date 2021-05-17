@@ -78,10 +78,20 @@ namespace SideLine.Helpers
             var classifica=new List<Classifica>();
             using (var connection = new MySqlConnection(_connectionString))
             {
-                var sql = "SELECT * FROM classifica WHERE fk campionati=@fk_campionato ORDER BY posizione classifica ";
+                var sql = "SELECT * FROM classifica WHERE fk_campionati=@fk_campionato ORDER BY Posizione_Classifica";
                 classifica=connection.Query<Classifica>(sql, new { fk_campionato }).ToList();
             }
             return classifica;
+        }
+        public static List<Società_sportiva> GetSquadre(int fk_campionato)
+        {
+            var squadre = new List<Società_sportiva>();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                var sql = "SELECT * FROM Societa_Sportiva,classifica WHERE Classifica.fk_campionati=@fk_campionato and Classifica.FK_Societa_sportiva= Societa_sportiva.id ORDER BY posizione_classifica ";
+                squadre = connection.Query<Società_sportiva>(sql, new { fk_campionato }).ToList();
+            }
+            return squadre;
         }
         public static Società_sportiva GetSquadra(int id)
         {
@@ -108,6 +118,16 @@ namespace SideLine.Helpers
                 return false;
             }
             return true;
+        }
+        public static Campionati GetCampionatoById(int id)
+        {
+            var campionato = new Campionati();
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                var sql = "SELECT * FROM campionati WHERE id = @id";
+                campionato = connection.Query<Campionati>(sql, new { id }).FirstOrDefault();
+            }
+            return campionato;
         }
     }
 }

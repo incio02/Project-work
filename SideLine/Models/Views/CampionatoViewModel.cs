@@ -6,11 +6,11 @@ using System.Web;
 
 namespace SideLine.Models.Views
 {
-    public class CampionatoView
+    public class CampionatoViewModel
     {
-        public Campionati Campionati { get; set; }
+        public Campionati Campionato { get; set; }
         public string MessaggioErrore { get; set; }
-        public Classifica Classifica { get; set; }
-        public Società_sportiva Società { get; set; }
+        public List<Classifica> Classifica { get; set; }
+        public List<Società_sportiva> Squadre { get; set; }
     }
 }
