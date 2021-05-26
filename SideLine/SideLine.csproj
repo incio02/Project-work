@@ -145,6 +145,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\Account\AccountController.cs" />
+    <Compile Include="Controllers\Account\AreaRiservataController.cs" />
     <Compile Include="Controllers\Basket\BasketController.cs" />
     <Compile Include="Controllers\calcio\CalcioController.cs" />
     <Compile Include="Controllers\Formula1\Formula1Controller.cs" />
@@ -167,6 +168,7 @@
     <Compile Include="Models\Views\CampionatoViewModel.cs" />
     <Compile Include="Models\Views\HomeViewModel.cs" />
     <Compile Include="Models\Views\LoginViewModel.cs" />
+    <Compile Include="Models\Views\ProfiloViewModel.cs" />
     <Compile Include="Models\Views\SignUpViewModel.cs" />
     <Compile Include="Models\Views\SquadraView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,6 +197,7 @@
     <Content Include="Views\Basket\Squadra.cshtml" />
     <Content Include="Views\Formula1\Campionato.cshtml" />
     <Content Include="Views\Motogp\Campionato.cshtml" />
+    <Content Include="Views\AreaRiservata\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

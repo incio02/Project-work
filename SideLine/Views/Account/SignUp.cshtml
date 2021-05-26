@@ -69,24 +69,28 @@
                 <label>@Model.LabelSesso </label><br />
                 @Html.DropDownListFor(t => t.Utente.Sesso, new List<SelectListItem>
                 {new SelectListItem{Text="Maschio", Value="Maschio"},
-                     new SelectListItem{Text="Femmina", Value="Femmina"}}, "Seleziona Sesso")
+                 new SelectListItem{Text="Femmina", Value="Femmina"}}, "Seleziona Sesso")
                 @Html.ValidationMessageFor(t => t.Utente.Sesso)
                 <br />
             </div>
         </div>
-    </div>/*
+    </div>
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
                 <label>@Model.LabelSquadra </label><br />
-                @Html.DropDownListFor(t => t.Utente.FKSquadre, new List<SelectListItem>
-                {new SelectListItem{Text="Atalanta", Value=Convert.ToInt32("1")},
-                     new SelectListItem{Text="Femmina", Value="Femmina"}}, "Seleziona Squadra")
-                @Html.ValidationMessageFor(t => t.Utente.Sesso)
+                @Html.DropDownListFor(t => t.Utente.FK_Societa_Sportiva, new List<SelectListItem>
+                {new SelectListItem{Text="AC MILAN", Value="AC MILAN"},
+                 new SelectListItem{Text="AEK ATHENS", Value="AEK ATHENS"},
+                 new SelectListItem { Text = "AJAX", Value = "AJAX" },
+                 new SelectListItem { Text = "ALAVES", Value = "ALAVES" },
+                 new SelectListItem{Text="ALFA ROMEO RACING", Value="ALFA ROMEO RACING"},
+                 new SelectListItem { Text = "ALPHATAURI", Value = "ALPHATAURI"}}, "Seleziona Squadra")
+                @Html.ValidationMessageFor(t => t.Utente.FK_Societa_Sportiva)
                 <br />
             </div>
         </div>
-    </div>*/
+    </div>
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">

@@ -10,7 +10,7 @@ namespace SideLine.Models.Entity
         public int Id { get; set; }
         public string Piazzamento { get; set; }
         public string Risultato { get; set; }
-        public int FK_Società_sportiva { get; set; }
+        public string FK_Società_sportiva { get; set; }
         public int FK_Eventi_Sportivi { get; set; }
     }
 }

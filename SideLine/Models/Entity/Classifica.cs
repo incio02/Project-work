@@ -18,7 +18,7 @@ namespace SideLine.Models.Entity
         public int Punti_subiti{ get; set; }
         public int Differenza_reti { get; set; }
         public int FK_Campionati { get; set; }
-        public int FK_Società_Sportiva { get; set; }
+        public string FK_Società_Sportiva { get; set; }
 
     }
 }

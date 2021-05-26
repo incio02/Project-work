@@ -58,6 +58,7 @@ namespace SideLine.Controllers
                 {
                     model.Messaggio = "Errore del server";
                 }
+                model.Messaggio = "Registrazione avvenuta con successo";
              
             }
 

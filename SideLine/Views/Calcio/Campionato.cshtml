@@ -4,6 +4,325 @@
     ViewBag.Title = @Model.Campionato.Nome;
     Layout = "~/Views/Layout/Layout.cshtml";
 }
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 2px;
+        }
+        th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 2px;
+            background-color: #4CAF50;
+            color:white
+        }
+        .champions {
+            background-color: dodgerblue;
+            color: white
+        }
+        .europa {
+            background-color: orange;
+            color: white
+        }
+        .conference {
+            background-color: limegreen;
+            color: white
+        }
+        .retrocessione {
+            background-color: red;
+            color: white
+        }
+        .quadrato {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
 <h2>@Model.Campionato.Nome</h2>
+<h3></h3>
+<br />
 
+<div style="overflow-x:auto; text-align:center">
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Punti</th>
+            <th>Partite giocate</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="champions">1</td>
+            <td></td>
+            @*<td>@Model.Squadre[1].Nome</td>*@
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="champions">2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="champions">3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="champions">4</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="europa">5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="europa">6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="conference">7</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="retrocessione">18</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="retrocessione">19</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="retrocessione">20</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table><br />
+            <table>
+                <tr>
+                    <td><div class="quadrato" style="background-color:dodgerblue"></div></td>
+                    <td style="font-weight:bold">Qualificazione a Champions League</td>
+                </tr>
+                <tr>
+                    <td><div class="quadrato" style="background-color:orange"></div></td>
+                    <td style="font-weight:bold">Qualificazione a Europa League</td>
+                </tr>
+                <tr>
+                    <td><div class="quadrato" style="background-color:limegreen"></div></td>
+                    <td style="font-weight:bold">Qualificazione a Conference League</td>
+                </tr>
+                <tr>
+                    <td><div class="quadrato" style="background-color:red"></div></td>
+                    <td style="font-weight:bold">Retrocessione</td>
+                </tr>
+            </table>
+
+</div>

@@ -19,7 +19,7 @@ namespace SideLine.Models.Entity
         [Required]
         public string Password { get; set; }
         public string Sesso { get; set; }
-        public int FKSquadre { get; set; }
+        public string FK_Societa_Sportiva { get; set; }
         [Range(typeof(bool), "true", "true", ErrorMessage = "Per registrarsi bisogna accettare la privacy")]
         public bool Privacy { get; set; }
     }
