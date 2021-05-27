@@ -13,12 +13,12 @@ namespace SideLine.Models.Entity
         public int Giocate { get; set; }
         public int Vinte { get; set; }
         public int Pareggiate { get; set; }
-        public int Persi { get; set; }
+        public int Perse { get; set; }
         public int Punti_segnati { get; set; }
         public int Punti_subiti{ get; set; }
         public int Differenza_reti { get; set; }
         public int FK_Campionati { get; set; }
-        public string FK_Società_Sportiva { get; set; }
+        public string FK_Societa_Sportiva { get; set; }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using SideLine.Models.Entity;
+﻿using SideLine.Helpers;
+using SideLine.Models.Entity;
 using SideLine.Models.Views;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,13 @@ namespace SideLine.Controllers.Account
             model.LabelPassword = "Password";
             model.LabelSquadra = "Squadra preferita";
             model.BtnAggiorna = "Aggiorna";
+        }
+        [HttpPost]
+        public ActionResult Index(ProfiloViewModel model)
+        {
+            DatabaseHelper.UpdatePassword(model.Utente.Id, model.Password);
+            SetProfiloViewModelLabels(model);
+            return View(model);
         }
     }
 }

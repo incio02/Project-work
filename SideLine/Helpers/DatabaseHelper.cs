@@ -78,7 +78,7 @@ namespace SideLine.Helpers
             var classifica=new List<Classifica>();
             using (var connection = new MySqlConnection(_connectionString))
             {
-                var sql = "SELECT * FROM classifica WHERE fk_campionati=@fk_campionato ORDER BY Posizione_Classifica";
+                var sql = "SELECT * FROM classifica WHERE fk_campionati=@fk_campionato ORDER BY Id";
                 classifica=connection.Query<Classifica>(sql, new { fk_campionato }).ToList();
             }
             return classifica;
@@ -130,4 +130,5 @@ namespace SideLine.Helpers
             return campionato;
         }
     }
+    
 }

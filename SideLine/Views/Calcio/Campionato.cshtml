@@ -12,51 +12,1699 @@
             width: 100%;
         }
 
-        td{
+        td {
             border: 1px solid black;
             text-align: center;
             padding: 2px;
         }
+
         th {
             border: 1px solid black;
             text-align: center;
             padding: 2px;
             background-color: #4CAF50;
-            color:white
-        }
-        .champions {
-            background-color: dodgerblue;
             color: white
         }
+
+        .champions {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .championsp {
+            background-color: blueviolet;
+            color: white
+        }
+
         .europa {
             background-color: orange;
             color: white
         }
+
         .conference {
             background-color: limegreen;
             color: white
         }
+
         .retrocessione {
             background-color: red;
             color: white
         }
+
         .quadrato {
             width: 40px;
             height: 40px;
+        }
+
+        .promozione {
+            background-color: blue;
+            color: white
+        }
+
+        .playoff {
+            background-color: lightblue;
+            color: white
+        }
+
+        .playout {
+            background-color: orangered;
+            color: white
+        }
+
+        .Fases {
+            background-color: darkblue;
+            color: white
         }
     </style>
 </head>
 <h2>@Model.Campionato.Nome</h2>
 <h3></h3>
 <br />
+@if (Model.Campionato.Id == 1 || Model.Campionato.Id == 3 || Model.Campionato.Id == 5)
+{
+    <div style="overflow-x:auto; text-align:center">
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="champions">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(0).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(1).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(2).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(3).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(4).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(5).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="conference">7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(6).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(7).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(8).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(9).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(10).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(11).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(12).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(13).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(14).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(15).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(16).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">18</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(17).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">19</td>
+                <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(18).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Giocate</td>
+                <td>@Model.Classifica.ElementAt(18).Vinte</td>
+                <td>@Model.Classifica.ElementAt(18).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(18).Perse</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(18).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">20</td>
+                <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(19).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Giocate</td>
+                <td>@Model.Classifica.ElementAt(19).Vinte</td>
+                <td>@Model.Classifica.ElementAt(19).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(19).Perse</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(19).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td><div class="quadrato" style="background-color:dodgerblue"></div></td>
+                <td style="font-weight:bold">Qualificazione a Champions League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:orange"></div></td>
+                <td style="font-weight:bold">Qualificazione a Europa League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:limegreen"></div></td>
+                <td style="font-weight:bold">Qualificazione a Conference League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:red"></div></td>
+                <td style="font-weight:bold">Retrocessione</td>
+            </tr>
+        </table>
 
+    </div>
+}
+@if (Model.Campionato.Id == 2)
+{
+    <div style="overflow-x:auto; text-align:center">
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="promozione">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(0).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="promozione">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(1).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playoff">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(2).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playoff">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(3).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playoff">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(4).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playoff">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(5).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playoff">7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(6).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playoff">8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(7).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(8).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(9).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(10).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(11).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(12).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(13).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(14).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(15).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">17</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(16).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">18</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(17).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">19</td>
+                <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(18).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Giocate</td>
+                <td>@Model.Classifica.ElementAt(18).Vinte</td>
+                <td>@Model.Classifica.ElementAt(18).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(18).Perse</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(18).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">20</td>
+                <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(19).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Giocate</td>
+                <td>@Model.Classifica.ElementAt(19).Vinte</td>
+                <td>@Model.Classifica.ElementAt(19).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(19).Perse</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(19).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td><div class="quadrato" style="background-color:blue"></div></td>
+                <td style="font-weight:bold">Promozione in Serie A</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:lightblue"></div></td>
+                <td style="font-weight:bold">Qualificazione ai Play off</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:red"></div></td>
+                <td style="font-weight:bold">Retrocessione in Serie C</td>
+            </tr>
+        </table>
+    </div>
+}
+@if (Model.Campionato.Id == 4)
+{
+    <div style="overflow-x:auto; text-align:center">
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="champions">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(0).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(1).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(2).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(3).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(4).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(5).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="conference">7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(6).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(7).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(8).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(9).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(10).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(11).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(12).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(13).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(14).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playout">16</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(15).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">17</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(16).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">18</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(17).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td><div class="quadrato" style="background-color:dodgerblue"></div></td>
+                <td style="font-weight:bold">Qualificazione a Champions League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:orange"></div></td>
+                <td style="font-weight:bold">Qualificazione a Europa League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:limegreen"></div></td>
+                <td style="font-weight:bold">Qualificazione a Conference League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:orangered"></div></td>
+                <td style="font-weight:bold">Qualificazione ai Play out</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:red"></div></td>
+                <td style="font-weight:bold">Retrocessione</td>
+            </tr>
+        </table>
+
+    </div>
+}
+@if (Model.Campionato.Id == 6)
+{
+    <div style="overflow-x:auto; text-align:center">
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="champions">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(0).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="champions">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(1).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="championsp">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(2).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(3).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(4).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="conference">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(5).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(6).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(7).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(8).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(9).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(10).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(11).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(12).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(13).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(14).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(15).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(16).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="playout">18</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(17).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">19</td>
+                <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(18).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Giocate</td>
+                <td>@Model.Classifica.ElementAt(18).Vinte</td>
+                <td>@Model.Classifica.ElementAt(18).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(18).Perse</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(18).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">20</td>
+                <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(19).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Giocate</td>
+                <td>@Model.Classifica.ElementAt(19).Vinte</td>
+                <td>@Model.Classifica.ElementAt(19).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(19).Perse</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(19).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td><div class="quadrato" style="background-color:dodgerblue"></div></td>
+                <td style="font-weight:bold">Qualificazione a Champions League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:blueviolet"></div></td>
+                <td style="font-weight:bold">Preliminari Champions League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:orange"></div></td>
+                <td style="font-weight:bold">Qualificazione a Europa League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:limegreen"></div></td>
+                <td style="font-weight:bold">Qualificazione a Conference League</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:orangered"></div></td>
+                <td style="font-weight:bold">Qualificazione ai Play out</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:red"></div></td>
+                <td style="font-weight:bold">Retrocessione</td>
+            </tr>
+        </table>
+
+    </div>
+}
+@if (Model.Campionato.Id == 7)
+{
+    <div style="overflow-x:auto; text-align:center">
+        <h3>Girone A</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(0).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(0).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(1).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(1).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(2).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(2).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(3).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(3).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone B</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(4).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(4).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(5).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(5).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(6).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(6).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(7).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(7).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone C</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(8).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(8).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(9).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(9).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(10).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(10).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(11).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(11).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone D</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(12).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(12).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(13).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(13).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(14).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(14).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(15).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(15).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone E</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(16).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(16).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(17).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(17).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(18).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Giocate</td>
+                <td>@Model.Classifica.ElementAt(18).Vinte</td>
+                <td>@Model.Classifica.ElementAt(18).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(18).Perse</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(18).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(18).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(19).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Giocate</td>
+                <td>@Model.Classifica.ElementAt(19).Vinte</td>
+                <td>@Model.Classifica.ElementAt(19).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(19).Perse</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(19).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(19).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone F</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(20).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(20).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(20).Giocate</td>
+                <td>@Model.Classifica.ElementAt(20).Vinte</td>
+                <td>@Model.Classifica.ElementAt(20).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(20).Perse</td>
+                <td>@Model.Classifica.ElementAt(20).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(20).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(20).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(21).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(21).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(21).Giocate</td>
+                <td>@Model.Classifica.ElementAt(21).Vinte</td>
+                <td>@Model.Classifica.ElementAt(21).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(21).Perse</td>
+                <td>@Model.Classifica.ElementAt(21).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(21).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(21).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(22).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(22).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(22).Giocate</td>
+                <td>@Model.Classifica.ElementAt(22).Vinte</td>
+                <td>@Model.Classifica.ElementAt(22).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(18).Perse</td>
+                <td>@Model.Classifica.ElementAt(22).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(22).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(22).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(23).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(23).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(23).Giocate</td>
+                <td>@Model.Classifica.ElementAt(23).Vinte</td>
+                <td>@Model.Classifica.ElementAt(23).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(23).Perse</td>
+                <td>@Model.Classifica.ElementAt(23).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(23).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(23).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone G</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(24).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(24).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(24).Giocate</td>
+                <td>@Model.Classifica.ElementAt(24).Vinte</td>
+                <td>@Model.Classifica.ElementAt(24).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(24).Perse</td>
+                <td>@Model.Classifica.ElementAt(24).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(24).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(24).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(25).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(25).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(25).Giocate</td>
+                <td>@Model.Classifica.ElementAt(25).Vinte</td>
+                <td>@Model.Classifica.ElementAt(25).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(25).Perse</td>
+                <td>@Model.Classifica.ElementAt(25).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(25).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(25).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(26).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(26).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(26).Giocate</td>
+                <td>@Model.Classifica.ElementAt(26).Vinte</td>
+                <td>@Model.Classifica.ElementAt(26).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(26).Perse</td>
+                <td>@Model.Classifica.ElementAt(26).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(26).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(26).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(27).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(27).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(27).Giocate</td>
+                <td>@Model.Classifica.ElementAt(27).Vinte</td>
+                <td>@Model.Classifica.ElementAt(27).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(27).Perse</td>
+                <td>@Model.Classifica.ElementAt(27).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(27).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(27).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <h3>Girone H</h3>
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Partite giocate</th>
+                <th>Punti</th>
+                <th>Vinte</th>
+                <th>Pareggiate</th>
+                <th>Perse</th>
+                <th>Gol fatti</th>
+                <th>Gol subiti</th>
+                <th>Differenza reti</th>
+            </tr>
+            <tr>
+                <td class="Fases">1</td>
+                <td>@Model.Classifica.ElementAt(28).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(28).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(28).Giocate</td>
+                <td>@Model.Classifica.ElementAt(28).Vinte</td>
+                <td>@Model.Classifica.ElementAt(28).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(24).Perse</td>
+                <td>@Model.Classifica.ElementAt(28).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(28).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(28).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="Fases">2</td>
+                <td>@Model.Classifica.ElementAt(29).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(29).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(29).Giocate</td>
+                <td>@Model.Classifica.ElementAt(29).Vinte</td>
+                <td>@Model.Classifica.ElementAt(29).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(29).Perse</td>
+                <td>@Model.Classifica.ElementAt(29).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(29).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(29).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td class="europa">3</td>
+                <td>@Model.Classifica.ElementAt(30).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(30).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(30).Giocate</td>
+                <td>@Model.Classifica.ElementAt(30).Vinte</td>
+                <td>@Model.Classifica.ElementAt(30).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(30).Perse</td>
+                <td>@Model.Classifica.ElementAt(30).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(30).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(30).Differenza_reti</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>@Model.Classifica.ElementAt(31).FK_Societa_Sportiva</td>
+                <td>@Model.Classifica.ElementAt(31).Punteggio</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(31).Giocate</td>
+                <td>@Model.Classifica.ElementAt(31).Vinte</td>
+                <td>@Model.Classifica.ElementAt(31).Pareggiate</td>
+                <td>@Model.Classifica.ElementAt(31).Perse</td>
+                <td>@Model.Classifica.ElementAt(31).Punti_segnati</td>
+                <td>@Model.Classifica.ElementAt(31).Punti_subiti</td>
+                <td>@Model.Classifica.ElementAt(31).Differenza_reti</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td><div class="quadrato" style="background-color:darkblue"></div></td>
+                <td style="font-weight:bold">Qualificazione a fase successiva</td>
+            </tr>
+            <tr>
+                <td><div class="quadrato" style="background-color:orange"></div></td>
+                <td style="font-weight:bold">Restrocessione in Europa League</td>
+            </tr>
+        </table>
+
+    </div>
+}
+@if (Model.Campionato.Id == 8)
+{
 <div style="overflow-x:auto; text-align:center">
+    <h3>Girone A</h3>
     <table>
         <tr>
             <th>Posizione</th>
             <th>Team</th>
-            <th>Punti</th>
             <th>Partite giocate</th>
+            <th>Punti</th>
             <th>Vinte</th>
             <th>Pareggiate</th>
             <th>Perse</th>
@@ -65,264 +1713,879 @@
             <th>Differenza reti</th>
         </tr>
         <tr>
-            <td class="champions">1</td>
-            <td></td>
-            @*<td>@Model.Squadre[1].Nome</td>*@
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(0).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Giocate</td>
+            <td>@Model.Classifica.ElementAt(0).Vinte</td>
+            <td>@Model.Classifica.ElementAt(0).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(0).Perse</td>
+            <td>@Model.Classifica.ElementAt(0).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(0).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(0).Differenza_reti</td>
         </tr>
         <tr>
-            <td class="champions">2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(1).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Giocate</td>
+            <td>@Model.Classifica.ElementAt(1).Vinte</td>
+            <td>@Model.Classifica.ElementAt(1).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(1).Perse</td>
+            <td>@Model.Classifica.ElementAt(1).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(1).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(1).Differenza_reti</td>
         </tr>
         <tr>
-            <td class="champions">3</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(2).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Giocate</td>
+            <td>@Model.Classifica.ElementAt(2).Vinte</td>
+            <td>@Model.Classifica.ElementAt(2).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(2).Perse</td>
+            <td>@Model.Classifica.ElementAt(2).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(2).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(2).Differenza_reti</td>
         </tr>
         <tr>
-            <td class="champions">4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="europa">5</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="europa">6</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="conference">7</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>14</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="retrocessione">18</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="retrocessione">19</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td class="retrocessione">20</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(3).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Giocate</td>
+            <td>@Model.Classifica.ElementAt(3).Vinte</td>
+            <td>@Model.Classifica.ElementAt(3).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(3).Perse</td>
+            <td>@Model.Classifica.ElementAt(3).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(3).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(3).Differenza_reti</td>
         </tr>
     </table><br />
-            <table>
-                <tr>
-                    <td><div class="quadrato" style="background-color:dodgerblue"></div></td>
-                    <td style="font-weight:bold">Qualificazione a Champions League</td>
-                </tr>
-                <tr>
-                    <td><div class="quadrato" style="background-color:orange"></div></td>
-                    <td style="font-weight:bold">Qualificazione a Europa League</td>
-                </tr>
-                <tr>
-                    <td><div class="quadrato" style="background-color:limegreen"></div></td>
-                    <td style="font-weight:bold">Qualificazione a Conference League</td>
-                </tr>
-                <tr>
-                    <td><div class="quadrato" style="background-color:red"></div></td>
-                    <td style="font-weight:bold">Retrocessione</td>
-                </tr>
-            </table>
+    <h3>Girone B</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(4).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Giocate</td>
+            <td>@Model.Classifica.ElementAt(4).Vinte</td>
+            <td>@Model.Classifica.ElementAt(4).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(4).Perse</td>
+            <td>@Model.Classifica.ElementAt(4).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(4).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(4).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(5).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Giocate</td>
+            <td>@Model.Classifica.ElementAt(5).Vinte</td>
+            <td>@Model.Classifica.ElementAt(5).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(5).Perse</td>
+            <td>@Model.Classifica.ElementAt(5).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(5).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(5).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(6).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Giocate</td>
+            <td>@Model.Classifica.ElementAt(6).Vinte</td>
+            <td>@Model.Classifica.ElementAt(6).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(6).Perse</td>
+            <td>@Model.Classifica.ElementAt(6).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(6).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(6).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(7).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Giocate</td>
+            <td>@Model.Classifica.ElementAt(7).Vinte</td>
+            <td>@Model.Classifica.ElementAt(7).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(7).Perse</td>
+            <td>@Model.Classifica.ElementAt(7).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(7).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(7).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone C</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(8).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Giocate</td>
+            <td>@Model.Classifica.ElementAt(8).Vinte</td>
+            <td>@Model.Classifica.ElementAt(8).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(8).Perse</td>
+            <td>@Model.Classifica.ElementAt(8).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(8).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(8).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(9).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Giocate</td>
+            <td>@Model.Classifica.ElementAt(9).Vinte</td>
+            <td>@Model.Classifica.ElementAt(9).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(9).Perse</td>
+            <td>@Model.Classifica.ElementAt(9).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(9).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(9).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(10).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Giocate</td>
+            <td>@Model.Classifica.ElementAt(10).Vinte</td>
+            <td>@Model.Classifica.ElementAt(10).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(10).Perse</td>
+            <td>@Model.Classifica.ElementAt(10).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(10).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(10).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(11).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Giocate</td>
+            <td>@Model.Classifica.ElementAt(11).Vinte</td>
+            <td>@Model.Classifica.ElementAt(11).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(11).Perse</td>
+            <td>@Model.Classifica.ElementAt(11).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(11).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(11).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone D</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(12).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Giocate</td>
+            <td>@Model.Classifica.ElementAt(12).Vinte</td>
+            <td>@Model.Classifica.ElementAt(12).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(12).Perse</td>
+            <td>@Model.Classifica.ElementAt(12).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(12).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(12).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(13).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Giocate</td>
+            <td>@Model.Classifica.ElementAt(13).Vinte</td>
+            <td>@Model.Classifica.ElementAt(13).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(13).Perse</td>
+            <td>@Model.Classifica.ElementAt(13).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(13).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(13).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(14).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Giocate</td>
+            <td>@Model.Classifica.ElementAt(14).Vinte</td>
+            <td>@Model.Classifica.ElementAt(14).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(14).Perse</td>
+            <td>@Model.Classifica.ElementAt(14).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(14).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(14).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(15).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Giocate</td>
+            <td>@Model.Classifica.ElementAt(15).Vinte</td>
+            <td>@Model.Classifica.ElementAt(15).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(15).Perse</td>
+            <td>@Model.Classifica.ElementAt(15).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(15).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(15).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone E</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(16).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Giocate</td>
+            <td>@Model.Classifica.ElementAt(16).Vinte</td>
+            <td>@Model.Classifica.ElementAt(16).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(16).Perse</td>
+            <td>@Model.Classifica.ElementAt(16).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(16).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(16).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(17).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Giocate</td>
+            <td>@Model.Classifica.ElementAt(17).Vinte</td>
+            <td>@Model.Classifica.ElementAt(17).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(17).Perse</td>
+            <td>@Model.Classifica.ElementAt(17).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(17).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(17).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(18).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Giocate</td>
+            <td>@Model.Classifica.ElementAt(18).Vinte</td>
+            <td>@Model.Classifica.ElementAt(18).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(18).Perse</td>
+            <td>@Model.Classifica.ElementAt(18).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(18).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(18).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(19).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Giocate</td>
+            <td>@Model.Classifica.ElementAt(19).Vinte</td>
+            <td>@Model.Classifica.ElementAt(19).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(19).Perse</td>
+            <td>@Model.Classifica.ElementAt(19).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(19).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(19).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone F</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(20).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(20).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(20).Giocate</td>
+            <td>@Model.Classifica.ElementAt(20).Vinte</td>
+            <td>@Model.Classifica.ElementAt(20).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(20).Perse</td>
+            <td>@Model.Classifica.ElementAt(20).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(20).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(20).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(21).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(21).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(21).Giocate</td>
+            <td>@Model.Classifica.ElementAt(21).Vinte</td>
+            <td>@Model.Classifica.ElementAt(21).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(21).Perse</td>
+            <td>@Model.Classifica.ElementAt(21).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(21).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(21).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(22).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(22).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(22).Giocate</td>
+            <td>@Model.Classifica.ElementAt(22).Vinte</td>
+            <td>@Model.Classifica.ElementAt(22).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(18).Perse</td>
+            <td>@Model.Classifica.ElementAt(22).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(22).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(22).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(23).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(23).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(23).Giocate</td>
+            <td>@Model.Classifica.ElementAt(23).Vinte</td>
+            <td>@Model.Classifica.ElementAt(23).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(23).Perse</td>
+            <td>@Model.Classifica.ElementAt(23).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(23).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(23).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone G</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(24).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(24).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(24).Giocate</td>
+            <td>@Model.Classifica.ElementAt(24).Vinte</td>
+            <td>@Model.Classifica.ElementAt(24).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(24).Perse</td>
+            <td>@Model.Classifica.ElementAt(24).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(24).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(24).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(25).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(25).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(25).Giocate</td>
+            <td>@Model.Classifica.ElementAt(25).Vinte</td>
+            <td>@Model.Classifica.ElementAt(25).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(25).Perse</td>
+            <td>@Model.Classifica.ElementAt(25).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(25).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(25).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(26).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(26).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(26).Giocate</td>
+            <td>@Model.Classifica.ElementAt(26).Vinte</td>
+            <td>@Model.Classifica.ElementAt(26).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(26).Perse</td>
+            <td>@Model.Classifica.ElementAt(26).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(26).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(26).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(27).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(27).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(27).Giocate</td>
+            <td>@Model.Classifica.ElementAt(27).Vinte</td>
+            <td>@Model.Classifica.ElementAt(27).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(27).Perse</td>
+            <td>@Model.Classifica.ElementAt(27).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(27).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(27).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone H</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(28).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(28).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(28).Giocate</td>
+            <td>@Model.Classifica.ElementAt(28).Vinte</td>
+            <td>@Model.Classifica.ElementAt(28).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(24).Perse</td>
+            <td>@Model.Classifica.ElementAt(28).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(28).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(28).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(29).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(29).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(29).Giocate</td>
+            <td>@Model.Classifica.ElementAt(29).Vinte</td>
+            <td>@Model.Classifica.ElementAt(29).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(29).Perse</td>
+            <td>@Model.Classifica.ElementAt(29).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(29).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(29).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(30).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(30).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(30).Giocate</td>
+            <td>@Model.Classifica.ElementAt(30).Vinte</td>
+            <td>@Model.Classifica.ElementAt(30).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(30).Perse</td>
+            <td>@Model.Classifica.ElementAt(30).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(30).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(30).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(31).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(31).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(31).Giocate</td>
+            <td>@Model.Classifica.ElementAt(31).Vinte</td>
+            <td>@Model.Classifica.ElementAt(31).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(31).Perse</td>
+            <td>@Model.Classifica.ElementAt(31).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(31).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(31).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone G</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(24).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(24).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(24).Giocate</td>
+            <td>@Model.Classifica.ElementAt(24).Vinte</td>
+            <td>@Model.Classifica.ElementAt(24).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(24).Perse</td>
+            <td>@Model.Classifica.ElementAt(24).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(24).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(24).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(25).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(25).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(25).Giocate</td>
+            <td>@Model.Classifica.ElementAt(25).Vinte</td>
+            <td>@Model.Classifica.ElementAt(25).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(25).Perse</td>
+            <td>@Model.Classifica.ElementAt(25).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(25).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(25).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(26).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(26).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(26).Giocate</td>
+            <td>@Model.Classifica.ElementAt(26).Vinte</td>
+            <td>@Model.Classifica.ElementAt(26).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(26).Perse</td>
+            <td>@Model.Classifica.ElementAt(26).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(26).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(26).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(27).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(27).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(27).Giocate</td>
+            <td>@Model.Classifica.ElementAt(27).Vinte</td>
+            <td>@Model.Classifica.ElementAt(27).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(27).Perse</td>
+            <td>@Model.Classifica.ElementAt(27).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(27).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(27).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone H</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(28).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(28).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(28).Giocate</td>
+            <td>@Model.Classifica.ElementAt(28).Vinte</td>
+            <td>@Model.Classifica.ElementAt(28).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(28).Perse</td>
+            <td>@Model.Classifica.ElementAt(28).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(28).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(28).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(29).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(29).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(29).Giocate</td>
+            <td>@Model.Classifica.ElementAt(29).Vinte</td>
+            <td>@Model.Classifica.ElementAt(29).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(29).Perse</td>
+            <td>@Model.Classifica.ElementAt(29).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(29).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(29).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(30).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(30).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(30).Giocate</td>
+            <td>@Model.Classifica.ElementAt(30).Vinte</td>
+            <td>@Model.Classifica.ElementAt(30).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(30).Perse</td>
+            <td>@Model.Classifica.ElementAt(30).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(30).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(30).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(31).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(31).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(31).Giocate</td>
+            <td>@Model.Classifica.ElementAt(31).Vinte</td>
+            <td>@Model.Classifica.ElementAt(31).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(31).Perse</td>
+            <td>@Model.Classifica.ElementAt(31).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(31).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(31).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone I</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(32).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(32).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(32).Giocate</td>
+            <td>@Model.Classifica.ElementAt(32).Vinte</td>
+            <td>@Model.Classifica.ElementAt(32).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(32).Perse</td>
+            <td>@Model.Classifica.ElementAt(32).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(32).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(32).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(33).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(33).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(33).Giocate</td>
+            <td>@Model.Classifica.ElementAt(33).Vinte</td>
+            <td>@Model.Classifica.ElementAt(33).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(33).Perse</td>
+            <td>@Model.Classifica.ElementAt(33).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(33).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(33).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(34).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(34).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(34).Giocate</td>
+            <td>@Model.Classifica.ElementAt(34).Vinte</td>
+            <td>@Model.Classifica.ElementAt(34).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(34).Perse</td>
+            <td>@Model.Classifica.ElementAt(34).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(34).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(34).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(35).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(35).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(35).Giocate</td>
+            <td>@Model.Classifica.ElementAt(35).Vinte</td>
+            <td>@Model.Classifica.ElementAt(35).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(35).Perse</td>
+            <td>@Model.Classifica.ElementAt(35).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(35).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(35).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone J</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(36).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(36).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(36).Giocate</td>
+            <td>@Model.Classifica.ElementAt(36).Vinte</td>
+            <td>@Model.Classifica.ElementAt(36).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(36).Perse</td>
+            <td>@Model.Classifica.ElementAt(36).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(36).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(36).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(37).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(37).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(37).Giocate</td>
+            <td>@Model.Classifica.ElementAt(37).Vinte</td>
+            <td>@Model.Classifica.ElementAt(37).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(37).Perse</td>
+            <td>@Model.Classifica.ElementAt(37).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(37).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(37).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(38).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(38).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(38).Giocate</td>
+            <td>@Model.Classifica.ElementAt(38).Vinte</td>
+            <td>@Model.Classifica.ElementAt(38).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(38).Perse</td>
+            <td>@Model.Classifica.ElementAt(38).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(38).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(38).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(39).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(39).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(39).Giocate</td>
+            <td>@Model.Classifica.ElementAt(39).Vinte</td>
+            <td>@Model.Classifica.ElementAt(39).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(39).Perse</td>
+            <td>@Model.Classifica.ElementAt(39).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(39).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(39).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone K</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(40).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(40).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(40).Giocate</td>
+            <td>@Model.Classifica.ElementAt(40).Vinte</td>
+            <td>@Model.Classifica.ElementAt(40).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(40).Perse</td>
+            <td>@Model.Classifica.ElementAt(40).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(40).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(40).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(41).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(41).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(41).Giocate</td>
+            <td>@Model.Classifica.ElementAt(41).Vinte</td>
+            <td>@Model.Classifica.ElementAt(41).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(41).Perse</td>
+            <td>@Model.Classifica.ElementAt(41).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(41).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(41).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(42).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(42).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(42).Giocate</td>
+            <td>@Model.Classifica.ElementAt(42).Vinte</td>
+            <td>@Model.Classifica.ElementAt(42).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(42).Perse</td>
+            <td>@Model.Classifica.ElementAt(42).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(42).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(42).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(43).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(43).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(43).Giocate</td>
+            <td>@Model.Classifica.ElementAt(43).Vinte</td>
+            <td>@Model.Classifica.ElementAt(43).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(43).Perse</td>
+            <td>@Model.Classifica.ElementAt(43).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(43).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(43).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <h3>Girone L</h3>
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Partite giocate</th>
+            <th>Punti</th>
+            <th>Vinte</th>
+            <th>Pareggiate</th>
+            <th>Perse</th>
+            <th>Gol fatti</th>
+            <th>Gol subiti</th>
+            <th>Differenza reti</th>
+        </tr>
+        <tr>
+            <td class="Fases">1</td>
+            <td>@Model.Classifica.ElementAt(44).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(44).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(44).Giocate</td>
+            <td>@Model.Classifica.ElementAt(44).Vinte</td>
+            <td>@Model.Classifica.ElementAt(44).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(44).Perse</td>
+            <td>@Model.Classifica.ElementAt(44).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(44).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(44).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td class="Fases">2</td>
+            <td>@Model.Classifica.ElementAt(45).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(45).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(45).Giocate</td>
+            <td>@Model.Classifica.ElementAt(45).Vinte</td>
+            <td>@Model.Classifica.ElementAt(45).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(45).Perse</td>
+            <td>@Model.Classifica.ElementAt(45).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(45).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(45).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(46).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(46).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(46).Giocate</td>
+            <td>@Model.Classifica.ElementAt(46).Vinte</td>
+            <td>@Model.Classifica.ElementAt(46).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(46).Perse</td>
+            <td>@Model.Classifica.ElementAt(46).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(46).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(46).Differenza_reti</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(47).FK_Societa_Sportiva</td>
+            <td>@Model.Classifica.ElementAt(47).Punteggio</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(47).Giocate</td>
+            <td>@Model.Classifica.ElementAt(47).Vinte</td>
+            <td>@Model.Classifica.ElementAt(47).Pareggiate</td>
+            <td>@Model.Classifica.ElementAt(47).Perse</td>
+            <td>@Model.Classifica.ElementAt(47).Punti_segnati</td>
+            <td>@Model.Classifica.ElementAt(47).Punti_subiti</td>
+            <td>@Model.Classifica.ElementAt(47).Differenza_reti</td>
+        </tr>
+    </table><br />
+    <table>
+        <tr>
+            <td><div class="quadrato" style="background-color:darkblue"></div></td>
+            <td style="font-weight:bold">Qualificazione a fase successiva</td>
+        </tr>
+    </table>
 
 </div>
+}
