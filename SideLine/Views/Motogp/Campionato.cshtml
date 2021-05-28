@@ -5,5 +5,86 @@
     Layout = "~/Views/Layout/Layout.cshtml";
 }
 
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 2px;
+        }
+
+        th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 2px;
+            background-color: red;
+            color: white
+        }
+    </style>
+</head>
 <h2>@Model.Campionato.Nome</h2>
+
+<div style="overflow-x:auto; text-align:center">
+    <table>
+        <tr>
+            <th>Posizione</th>
+            <th>Team</th>
+            <th>Punti</th>
+
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
+        <tr>
+            <td>6</td>
+            <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
+        <tr>
+            <td>9</td>
+            <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+            <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
+        </tr>
+    </table>
 
