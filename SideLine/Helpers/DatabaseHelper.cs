@@ -36,8 +36,8 @@ namespace SideLine.Helpers
             {
                 using (var connection = new MySqlConnection(_connectionString))
                 {
-                    var sql = "INSERT INTO utenti(nome, cognome, email, password, sesso, privacy) " +
-                    "VALUES (@nome,@cognome,@email,@password,@sesso,1); "+"SELECT LAST_INSERT_ID()";
+                    var sql = "INSERT INTO utenti(nome, cognome, email, password, sesso, privacy,FK_Societa_Sportiva) " +
+                    "VALUES (@nome,@cognome,@email,@password,@sesso,1,@FK_Societa_Sportiva); " + "SELECT LAST_INSERT_ID()";
                     id = connection.Query<int>(sql, utenti).First();
                 }
             }
@@ -54,7 +54,7 @@ namespace SideLine.Helpers
             {
                 using (var connection = new MySqlConnection(_connectionString))
                 {
-                    var sql = "UPDATE Utenti SET password=@password WHERE id=@id AND password<>'';";
+                    var sql = "UPDATE Utenti SET password=@password WHERE id=@id";
                     connection.Query(sql, new { id, password });
                 }
             }
@@ -68,7 +68,7 @@ namespace SideLine.Helpers
         {
             using (var connection = new MySqlConnection(_connectionString))
             {
-                var sql = "SELECT * FROM utenti WHERE email=@email and password<>'' ";
+                var sql = "SELECT * FROM utenti WHERE email=@email and password <>''";
                 return connection.Query<Utenti>(sql, new { email }).FirstOrDefault();
             }
 
