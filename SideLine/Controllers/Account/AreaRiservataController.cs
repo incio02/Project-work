@@ -25,7 +25,7 @@ namespace SideLine.Controllers.Account
 
         private void SetProfiloViewModelLabels(ProfiloViewModel model)
         {
-            ViewBag.Title = model.LabelTitolo = "Profilo";
+            ViewBag.Title = model.LabelTitolo = "Il tuo profilo";
             model.LabelConfermaPassword = "Conferma password";
             model.LabelEmail = "Indirizzo mail";
             model.LabelNome = "Nickname";
