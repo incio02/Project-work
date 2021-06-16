@@ -52,584 +52,581 @@
 <br />
 @if (Model.Campionato.Id == 11)
 {
-<div style="overflow-x:auto; text-align:center">
-    <table>
-        <tr>
-            <th>Posizione</th>
-            <th>Team</th>
-            <th>Punti</th>
-            <th>Partite giocate</th>
-            <th>Vinte</th>
-            <th>Perse</th>
-        </tr>
-        <tr>
-            <td class="playoff">1</td>
-            <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(0).Giocate</td>
-            <td>@Model.Classifica.ElementAt(0).Vinte</td>
-            <td>@Model.Classifica.ElementAt(0).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">2</td>
-            <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(1).Giocate</td>
-            <td>@Model.Classifica.ElementAt(1).Vinte</td>
-            <td>@Model.Classifica.ElementAt(1).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">3</td>
-            <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(2).Giocate</td>
-            <td>@Model.Classifica.ElementAt(2).Vinte</td>
-            <td>@Model.Classifica.ElementAt(2).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">4</td>
-            <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(3).Giocate</td>
-            <td>@Model.Classifica.ElementAt(3).Vinte</td>
-            <td>@Model.Classifica.ElementAt(3).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">5</td>
-            <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(4).Giocate</td>
-            <td>@Model.Classifica.ElementAt(4).Vinte</td>
-            <td>@Model.Classifica.ElementAt(4).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">6</td>
-            <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(5).Giocate</td>
-            <td>@Model.Classifica.ElementAt(5).Vinte</td>
-            <td>@Model.Classifica.ElementAt(5).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">7</td>
-            <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(6).Giocate</td>
-            <td>@Model.Classifica.ElementAt(6).Vinte</td>
-            <td>@Model.Classifica.ElementAt(6).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">8</td>
-            <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(7).Giocate</td>
-            <td>@Model.Classifica.ElementAt(7).Vinte</td>
-            <td>@Model.Classifica.ElementAt(7).Perse</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(8).Giocate</td>
-            <td>@Model.Classifica.ElementAt(8).Vinte</td>
-            <td>@Model.Classifica.ElementAt(8).Perse</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(9).Giocate</td>
-            <td>@Model.Classifica.ElementAt(9).Vinte</td>
-            <td>@Model.Classifica.ElementAt(9).Perse</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(10).Giocate</td>
-            <td>@Model.Classifica.ElementAt(10).Vinte</td>
-            <td>@Model.Classifica.ElementAt(10).Perse</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(11).Giocate</td>
-            <td>@Model.Classifica.ElementAt(11).Vinte</td>
-            <td>@Model.Classifica.ElementAt(11).Perse</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(12).Giocate</td>
-            <td>@Model.Classifica.ElementAt(12).Vinte</td>
-            <td>@Model.Classifica.ElementAt(12).Perse</td>
-        </tr>
-        <tr>
-            <td class="retrocessione">14</td>
-            <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(13).Giocate</td>
-            <td>@Model.Classifica.ElementAt(13).Vinte</td>
-            <td>@Model.Classifica.ElementAt(13).Perse</td>
-        </tr>
-        <tr>
-            <td class="retrocessione">15</td>
-            <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(14).Giocate</td>
-            <td>@Model.Classifica.ElementAt(14).Vinte</td>
-            <td>@Model.Classifica.ElementAt(14).Perse</td>
-        </tr>
-    </table><br />
-    <table>
-        <tr>
-            <td><div class="quadrato" style="background-color:green"></div></td>
-            <td style="font-weight:bold">Qualificazione a Playoff</td>
-        </tr>
-        <tr>
-            <td><div class="quadrato" style="background-color:red"></div></td>
-            <td style="font-weight:bold">Retrocessione in Serie A2</td>
-        </tr>
-    </table>
-</div>
+    <div style="overflow-x:auto; text-align:center">
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Punti</th>
+                <th>Partite giocate</th>
+                <th>Vinte</th>
+                <th>Perse</th>
+            </tr>
+            <tr>
+                <td class="playoff">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+            </tr>
+            <tr>
+                <td class="retrocessione">15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td style="font-weight:bold;color:black;background-color:green">Qualificazione ai Playoff</td>
+            </tr>
+            <tr>
+                <td style="font-weight:bold;color:black;background-color:red">Retrocessione in Serie A2</td>
+            </tr>
+        </table>
+
+    </div>
 }
 @if (Model.Campionato.Id == 12)
 {
-<div style="overflow-x:auto; text-align:center">
-    <table>
-        <tr>
-            <th>Posizione</th>
-            <th>Team</th>
-            <th>Punti</th>
-            <th>Partite giocate</th>
-            <th>Vinte</th>
-            <th>Perse</th>
-        </tr>
-        <tr>
-            <td class="finaleight">1</td>
-            <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(0).Giocate</td>
-            <td>@Model.Classifica.ElementAt(0).Vinte</td>
-            <td>@Model.Classifica.ElementAt(0).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">2</td>
-            <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(1).Giocate</td>
-            <td>@Model.Classifica.ElementAt(1).Vinte</td>
-            <td>@Model.Classifica.ElementAt(1).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">3</td>
-            <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(2).Giocate</td>
-            <td>@Model.Classifica.ElementAt(2).Vinte</td>
-            <td>@Model.Classifica.ElementAt(2).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">4</td>
-            <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(3).Giocate</td>
-            <td>@Model.Classifica.ElementAt(3).Vinte</td>
-            <td>@Model.Classifica.ElementAt(3).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">5</td>
-            <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(4).Giocate</td>
-            <td>@Model.Classifica.ElementAt(4).Vinte</td>
-            <td>@Model.Classifica.ElementAt(4).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">6</td>
-            <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(5).Giocate</td>
-            <td>@Model.Classifica.ElementAt(5).Vinte</td>
-            <td>@Model.Classifica.ElementAt(5).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">7</td>
-            <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(6).Giocate</td>
-            <td>@Model.Classifica.ElementAt(6).Vinte</td>
-            <td>@Model.Classifica.ElementAt(6).Perse</td>
-        </tr>
-        <tr>
-            <td class="finaleight">8</td>
-            <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(7).Giocate</td>
-            <td>@Model.Classifica.ElementAt(7).Vinte</td>
-            <td>@Model.Classifica.ElementAt(7).Perse</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(8).Giocate</td>
-            <td>@Model.Classifica.ElementAt(8).Vinte</td>
-            <td>@Model.Classifica.ElementAt(8).Perse</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(9).Giocate</td>
-            <td>@Model.Classifica.ElementAt(9).Vinte</td>
-            <td>@Model.Classifica.ElementAt(9).Perse</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(10).Giocate</td>
-            <td>@Model.Classifica.ElementAt(10).Vinte</td>
-            <td>@Model.Classifica.ElementAt(10).Perse</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(11).Giocate</td>
-            <td>@Model.Classifica.ElementAt(11).Vinte</td>
-            <td>@Model.Classifica.ElementAt(11).Perse</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(12).Giocate</td>
-            <td>@Model.Classifica.ElementAt(12).Vinte</td>
-            <td>@Model.Classifica.ElementAt(12).Perse</td>
-        </tr>
-        <tr>
-            <td>14</td>
-            <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(13).Giocate</td>
-            <td>@Model.Classifica.ElementAt(13).Vinte</td>
-            <td>@Model.Classifica.ElementAt(13).Perse</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(14).Giocate</td>
-            <td>@Model.Classifica.ElementAt(14).Vinte</td>
-            <td>@Model.Classifica.ElementAt(14).Perse</td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(15).Giocate</td>
-            <td>@Model.Classifica.ElementAt(15).Vinte</td>
-            <td>@Model.Classifica.ElementAt(15).Perse</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(16).Giocate</td>
-            <td>@Model.Classifica.ElementAt(16).Vinte</td>
-            <td>@Model.Classifica.ElementAt(16).Perse</td>
-        </tr>
-        <tr>
-            <td>18</td>
-            <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(17).Giocate</td>
-            <td>@Model.Classifica.ElementAt(17).Vinte</td>
-            <td>@Model.Classifica.ElementAt(17).Perse</td>
-        </tr>
-    </table><br />
-    <table>
-        <tr>
-            <td><div class="quadrato" style="background-color:green"></div></td>
-            <td style="font-weight:bold">Qualificazione a Playoff</td>
-        </tr>
-    </table>
-</div>
+    <div style="overflow-x:auto; text-align:center">
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Punti</th>
+                <th>Partite giocate</th>
+                <th>Vinte</th>
+                <th>Perse</th>
+            </tr>
+            <tr>
+                <td class="finaleight">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+            </tr>
+            <tr>
+                <td class="finaleight">8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td style="font-weight:bold;color:black;background-color:green">Qualificazione ai Playoff</td>
+            </tr>
+        </table>
+    </div>
 }
 @if (Model.Campionato.Id == 13)
 {
-<div style="overflow-x:auto; text-align:center">
-    <h3>Eastern Conference</h3><br />
-    <table>
-        <tr>
-            <th>Posizione</th>
-            <th>Team</th>
-            <th>Punti</th>
-            <th>Partite giocate</th>
-            <th>Vinte</th>
-            <th>Perse</th>
-        </tr>
-        <tr>
-            <td class="playoff">1</td>
-            <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(0).Giocate</td>
-            <td>@Model.Classifica.ElementAt(0).Vinte</td>
-            <td>@Model.Classifica.ElementAt(0).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">2</td>
-            <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(1).Giocate</td>
-            <td>@Model.Classifica.ElementAt(1).Vinte</td>
-            <td>@Model.Classifica.ElementAt(1).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">3</td>
-            <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(2).Giocate</td>
-            <td>@Model.Classifica.ElementAt(2).Vinte</td>
-            <td>@Model.Classifica.ElementAt(2).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">4</td>
-            <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(3).Giocate</td>
-            <td>@Model.Classifica.ElementAt(3).Vinte</td>
-            <td>@Model.Classifica.ElementAt(3).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">5</td>
-            <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(4).Giocate</td>
-            <td>@Model.Classifica.ElementAt(4).Vinte</td>
-            <td>@Model.Classifica.ElementAt(4).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">6</td>
-            <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(5).Giocate</td>
-            <td>@Model.Classifica.ElementAt(5).Vinte</td>
-            <td>@Model.Classifica.ElementAt(5).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">7</td>
-            <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(6).Giocate</td>
-            <td>@Model.Classifica.ElementAt(6).Vinte</td>
-            <td>@Model.Classifica.ElementAt(6).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">8</td>
-            <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(7).Giocate</td>
-            <td>@Model.Classifica.ElementAt(7).Vinte</td>
-            <td>@Model.Classifica.ElementAt(7).Perse</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(8).Giocate</td>
-            <td>@Model.Classifica.ElementAt(8).Vinte</td>
-            <td>@Model.Classifica.ElementAt(8).Perse</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(9).Giocate</td>
-            <td>@Model.Classifica.ElementAt(9).Vinte</td>
-            <td>@Model.Classifica.ElementAt(9).Perse</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(10).Giocate</td>
-            <td>@Model.Classifica.ElementAt(10).Vinte</td>
-            <td>@Model.Classifica.ElementAt(10).Perse</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(11).Giocate</td>
-            <td>@Model.Classifica.ElementAt(11).Vinte</td>
-            <td>@Model.Classifica.ElementAt(11).Perse</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(12).Giocate</td>
-            <td>@Model.Classifica.ElementAt(12).Vinte</td>
-            <td>@Model.Classifica.ElementAt(12).Perse</td>
-        </tr>
-        <tr>
-            <td>14</td>
-            <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(13).Giocate</td>
-            <td>@Model.Classifica.ElementAt(13).Vinte</td>
-            <td>@Model.Classifica.ElementAt(13).Perse</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(14).Giocate</td>
-            <td>@Model.Classifica.ElementAt(14).Vinte</td>
-            <td>@Model.Classifica.ElementAt(14).Perse</td>
-        </tr>
-    </table><br /><br />
-    <h3>Western Conference</h3><br />
-    <table>
-        <tr>
-            <th>Posizione</th>
-            <th>Team</th>
-            <th>Punti</th>
-            <th>Partite giocate</th>
-            <th>Vinte</th>
-            <th>Perse</th>
-        </tr>
-        <tr>
-            <td class="playoff">1</td>
-            <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(15).Giocate</td>
-            <td>@Model.Classifica.ElementAt(15).Vinte</td>
-            <td>@Model.Classifica.ElementAt(15).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">2</td>
-            <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(16).Giocate</td>
-            <td>@Model.Classifica.ElementAt(16).Vinte</td>
-            <td>@Model.Classifica.ElementAt(16).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">3</td>
-            <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(17).Giocate</td>
-            <td>@Model.Classifica.ElementAt(17).Vinte</td>
-            <td>@Model.Classifica.ElementAt(17).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">4</td>
-            <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(18).Giocate</td>
-            <td>@Model.Classifica.ElementAt(18).Vinte</td>
-            <td>@Model.Classifica.ElementAt(18).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">5</td>
-            <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(19).Giocate</td>
-            <td>@Model.Classifica.ElementAt(19).Vinte</td>
-            <td>@Model.Classifica.ElementAt(19).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">6</td>
-            <td>@Model.Classifica.ElementAt(20).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(20).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(20).Giocate</td>
-            <td>@Model.Classifica.ElementAt(20).Vinte</td>
-            <td>@Model.Classifica.ElementAt(20).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">7</td>
-            <td>@Model.Classifica.ElementAt(21).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(21).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(21).Giocate</td>
-            <td>@Model.Classifica.ElementAt(21).Vinte</td>
-            <td>@Model.Classifica.ElementAt(21).Perse</td>
-        </tr>
-        <tr>
-            <td class="playoff">8</td>
-            <td>@Model.Classifica.ElementAt(22).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(22).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(22).Giocate</td>
-            <td>@Model.Classifica.ElementAt(22).Vinte</td>
-            <td>@Model.Classifica.ElementAt(22).Perse</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>@Model.Classifica.ElementAt(23).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(23).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(23).Giocate</td>
-            <td>@Model.Classifica.ElementAt(23).Vinte</td>
-            <td>@Model.Classifica.ElementAt(23).Perse</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>@Model.Classifica.ElementAt(24).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(24).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(24).Giocate</td>
-            <td>@Model.Classifica.ElementAt(24).Vinte</td>
-            <td>@Model.Classifica.ElementAt(24).Perse</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>@Model.Classifica.ElementAt(25).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(25).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(25).Giocate</td>
-            <td>@Model.Classifica.ElementAt(25).Vinte</td>
-            <td>@Model.Classifica.ElementAt(25).Perse</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>@Model.Classifica.ElementAt(26).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(26).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(26).Giocate</td>
-            <td>@Model.Classifica.ElementAt(26).Vinte</td>
-            <td>@Model.Classifica.ElementAt(26).Perse</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>@Model.Classifica.ElementAt(27).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(27).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(27).Giocate</td>
-            <td>@Model.Classifica.ElementAt(27).Vinte</td>
-            <td>@Model.Classifica.ElementAt(27).Perse</td>
-        </tr>
-        <tr>
-            <td>14</td>
-            <td>@Model.Classifica.ElementAt(28).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(28).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(28).Giocate</td>
-            <td>@Model.Classifica.ElementAt(28).Vinte</td>
-            <td>@Model.Classifica.ElementAt(28).Perse</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>@Model.Classifica.ElementAt(29).FK_Societa_Sportiva</td>
-            <td style="font-weight:bold">@Model.Classifica.ElementAt(29).Punteggio</td>
-            <td>@Model.Classifica.ElementAt(29).Giocate</td>
-            <td>@Model.Classifica.ElementAt(29).Vinte</td>
-            <td>@Model.Classifica.ElementAt(29).Perse</td>
-        </tr>
-    </table><br />
-    <table>
-        <tr>
-            <td><div class="quadrato" style="background-color:green"></div></td>
-            <td style="font-weight:bold">Qualificazione a Playoff</td>
-        </tr>
-    </table>
-</div>
+    <div style="overflow-x:auto; text-align:center">
+        <h3>Eastern Conference</h3><br />
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Punti</th>
+                <th>Partite giocate</th>
+                <th>Vinte</th>
+                <th>Perse</th>
+            </tr>
+            <tr>
+                <td class="playoff">1</td>
+                <td>@Model.Classifica.ElementAt(0).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(0).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(0).Giocate</td>
+                <td>@Model.Classifica.ElementAt(0).Vinte</td>
+                <td>@Model.Classifica.ElementAt(0).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">2</td>
+                <td>@Model.Classifica.ElementAt(1).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(1).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(1).Giocate</td>
+                <td>@Model.Classifica.ElementAt(1).Vinte</td>
+                <td>@Model.Classifica.ElementAt(1).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">3</td>
+                <td>@Model.Classifica.ElementAt(2).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(2).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(2).Giocate</td>
+                <td>@Model.Classifica.ElementAt(2).Vinte</td>
+                <td>@Model.Classifica.ElementAt(2).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">4</td>
+                <td>@Model.Classifica.ElementAt(3).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(3).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(3).Giocate</td>
+                <td>@Model.Classifica.ElementAt(3).Vinte</td>
+                <td>@Model.Classifica.ElementAt(3).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">5</td>
+                <td>@Model.Classifica.ElementAt(4).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(4).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(4).Giocate</td>
+                <td>@Model.Classifica.ElementAt(4).Vinte</td>
+                <td>@Model.Classifica.ElementAt(4).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">6</td>
+                <td>@Model.Classifica.ElementAt(5).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(5).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(5).Giocate</td>
+                <td>@Model.Classifica.ElementAt(5).Vinte</td>
+                <td>@Model.Classifica.ElementAt(5).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">7</td>
+                <td>@Model.Classifica.ElementAt(6).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(6).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(6).Giocate</td>
+                <td>@Model.Classifica.ElementAt(6).Vinte</td>
+                <td>@Model.Classifica.ElementAt(6).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">8</td>
+                <td>@Model.Classifica.ElementAt(7).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(7).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(7).Giocate</td>
+                <td>@Model.Classifica.ElementAt(7).Vinte</td>
+                <td>@Model.Classifica.ElementAt(7).Perse</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(8).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(8).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(8).Giocate</td>
+                <td>@Model.Classifica.ElementAt(8).Vinte</td>
+                <td>@Model.Classifica.ElementAt(8).Perse</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(9).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(9).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(9).Giocate</td>
+                <td>@Model.Classifica.ElementAt(9).Vinte</td>
+                <td>@Model.Classifica.ElementAt(9).Perse</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(10).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(10).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(10).Giocate</td>
+                <td>@Model.Classifica.ElementAt(10).Vinte</td>
+                <td>@Model.Classifica.ElementAt(10).Perse</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(11).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(11).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(11).Giocate</td>
+                <td>@Model.Classifica.ElementAt(11).Vinte</td>
+                <td>@Model.Classifica.ElementAt(11).Perse</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(12).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(12).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(12).Giocate</td>
+                <td>@Model.Classifica.ElementAt(12).Vinte</td>
+                <td>@Model.Classifica.ElementAt(12).Perse</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(13).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(13).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(13).Giocate</td>
+                <td>@Model.Classifica.ElementAt(13).Vinte</td>
+                <td>@Model.Classifica.ElementAt(13).Perse</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(14).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(14).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(14).Giocate</td>
+                <td>@Model.Classifica.ElementAt(14).Vinte</td>
+                <td>@Model.Classifica.ElementAt(14).Perse</td>
+            </tr>
+        </table><br /><br />
+        <h3>Western Conference</h3><br />
+        <table>
+            <tr>
+                <th>Posizione</th>
+                <th>Team</th>
+                <th>Punti</th>
+                <th>Partite giocate</th>
+                <th>Vinte</th>
+                <th>Perse</th>
+            </tr>
+            <tr>
+                <td class="playoff">1</td>
+                <td>@Model.Classifica.ElementAt(15).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(15).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(15).Giocate</td>
+                <td>@Model.Classifica.ElementAt(15).Vinte</td>
+                <td>@Model.Classifica.ElementAt(15).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">2</td>
+                <td>@Model.Classifica.ElementAt(16).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(16).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(16).Giocate</td>
+                <td>@Model.Classifica.ElementAt(16).Vinte</td>
+                <td>@Model.Classifica.ElementAt(16).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">3</td>
+                <td>@Model.Classifica.ElementAt(17).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(17).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(17).Giocate</td>
+                <td>@Model.Classifica.ElementAt(17).Vinte</td>
+                <td>@Model.Classifica.ElementAt(17).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">4</td>
+                <td>@Model.Classifica.ElementAt(18).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(18).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(18).Giocate</td>
+                <td>@Model.Classifica.ElementAt(18).Vinte</td>
+                <td>@Model.Classifica.ElementAt(18).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">5</td>
+                <td>@Model.Classifica.ElementAt(19).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(19).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(19).Giocate</td>
+                <td>@Model.Classifica.ElementAt(19).Vinte</td>
+                <td>@Model.Classifica.ElementAt(19).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">6</td>
+                <td>@Model.Classifica.ElementAt(20).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(20).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(20).Giocate</td>
+                <td>@Model.Classifica.ElementAt(20).Vinte</td>
+                <td>@Model.Classifica.ElementAt(20).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">7</td>
+                <td>@Model.Classifica.ElementAt(21).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(21).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(21).Giocate</td>
+                <td>@Model.Classifica.ElementAt(21).Vinte</td>
+                <td>@Model.Classifica.ElementAt(21).Perse</td>
+            </tr>
+            <tr>
+                <td class="playoff">8</td>
+                <td>@Model.Classifica.ElementAt(22).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(22).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(22).Giocate</td>
+                <td>@Model.Classifica.ElementAt(22).Vinte</td>
+                <td>@Model.Classifica.ElementAt(22).Perse</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>@Model.Classifica.ElementAt(23).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(23).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(23).Giocate</td>
+                <td>@Model.Classifica.ElementAt(23).Vinte</td>
+                <td>@Model.Classifica.ElementAt(23).Perse</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>@Model.Classifica.ElementAt(24).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(24).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(24).Giocate</td>
+                <td>@Model.Classifica.ElementAt(24).Vinte</td>
+                <td>@Model.Classifica.ElementAt(24).Perse</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>@Model.Classifica.ElementAt(25).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(25).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(25).Giocate</td>
+                <td>@Model.Classifica.ElementAt(25).Vinte</td>
+                <td>@Model.Classifica.ElementAt(25).Perse</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>@Model.Classifica.ElementAt(26).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(26).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(26).Giocate</td>
+                <td>@Model.Classifica.ElementAt(26).Vinte</td>
+                <td>@Model.Classifica.ElementAt(26).Perse</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>@Model.Classifica.ElementAt(27).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(27).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(27).Giocate</td>
+                <td>@Model.Classifica.ElementAt(27).Vinte</td>
+                <td>@Model.Classifica.ElementAt(27).Perse</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>@Model.Classifica.ElementAt(28).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(28).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(28).Giocate</td>
+                <td>@Model.Classifica.ElementAt(28).Vinte</td>
+                <td>@Model.Classifica.ElementAt(28).Perse</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>@Model.Classifica.ElementAt(29).FK_Societa_Sportiva</td>
+                <td style="font-weight:bold">@Model.Classifica.ElementAt(29).Punteggio</td>
+                <td>@Model.Classifica.ElementAt(29).Giocate</td>
+                <td>@Model.Classifica.ElementAt(29).Vinte</td>
+                <td>@Model.Classifica.ElementAt(29).Perse</td>
+            </tr>
+        </table><br />
+        <table>
+            <tr>
+                <td style="font-weight:bold;color:black;background-color:green">Qualificazione ai Playoff</td>
+            </tr>
+        </table>
+    </div>
 }
