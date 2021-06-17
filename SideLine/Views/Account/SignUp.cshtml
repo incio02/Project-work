@@ -16,9 +16,8 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelNome </label><br />
+                <label style="font-weight:bold">@Model.LabelNome </label><br />
                 @Html.TextBoxFor(t => t.Utente.Nome, new { placeholder = Model.LabelNome })
-                @Html.ValidationMessageFor(t => t.Utente.Nome)
                 <br />
             </div>
         </div>
@@ -26,9 +25,8 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelCognome </label><br />
+                <label style="font-weight:bold">@Model.LabelCognome </label><br />
                 @Html.TextBoxFor(t => t.Utente.Cognome, new { placeholder = Model.LabelCognome })
-                @Html.ValidationMessageFor(t => t.Utente.Cognome)
                 <br />
             </div>
         </div>
@@ -36,9 +34,8 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelEmail </label><br />
+                <label style="font-weight:bold">@Model.LabelEmail </label><br />
                 @Html.TextBoxFor(t => t.Utente.Email, new { placeholder = Model.LabelEmail, type = "email" })
-                @Html.ValidationMessageFor(t => t.Utente.Email)
                 <br />
             </div>
         </div>
@@ -46,9 +43,8 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelPassword</label><br />
+                <label style="font-weight:bold">@Model.LabelPassword</label><br />
                 @Html.PasswordFor(t => t.Password, new { placeholder = Model.LabelPassword })
-                @Html.ValidationMessageFor(t => t.Password)
                 <br />
             </div>
         </div>
@@ -56,9 +52,8 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelConfermaPassword</label><br />
+                <label style="font-weight:bold">@Model.LabelConfermaPassword</label><br />
                 @Html.PasswordFor(t => t.ConfermaPassword, new { placeholder = Model.LabelConfermaPassword })
-                @Html.ValidationMessageFor(t => t.ConfermaPassword)
                 <br />
             </div>
         </div>
@@ -66,11 +61,10 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelSesso </label><br />
+                <label style="font-weight:bold">@Model.LabelSesso </label><br />
                 @Html.DropDownListFor(t => t.Utente.Sesso, new List<SelectListItem>
                 {new SelectListItem{Text="Maschio", Value="Maschio"},
                  new SelectListItem{Text="Femmina", Value="Femmina"}}, "Seleziona Sesso")
-                @Html.ValidationMessageFor(t => t.Utente.Sesso)
                 <br />
             </div>
         </div>
@@ -78,7 +72,7 @@
     <div class="row">
         <div class="col-md-offset-12 col-md-12">
             <div class="form-group">
-                <label>@Model.LabelSquadra </label><br />
+                <label style="font-weight:bold">@Model.LabelSquadra </label><br />
                 @Html.DropDownListFor(t => t.Utente.FK_Societa_Sportiva, new List<SelectListItem>
                 {new SelectListItem{Text="MILAN", Value="AC MILAN"},
                  new SelectListItem{Text="AEK ATHENS", Value="AEK ATHENS"},
@@ -332,7 +326,6 @@
                  new SelectListItem { Text = "ZENIT", Value = "ZENIT" },
                  new SelectListItem { Text = "ZORYA", Value = "ZORYA" },
                  }, "Seleziona Squadra")
-                 @Html.ValidationMessageFor(t => t.Utente.FK_Societa_Sportiva)
                 <br />
             </div>
         </div>
@@ -343,7 +336,6 @@
                 <div class="form-check">
                     @Html.CheckBoxFor(t => t.Utente.Privacy, new { @class = "form-check-input" })
                     <label for="utente_isprivacy" class="form-check-label">@Html.Raw(Model.LabelPrivacy)</label>
-                    @Html.ValidationMessageFor(t => t.Utente.Privacy)
                 </div>
             </div>
         </div>
@@ -356,11 +348,7 @@
     <br />
     if (!string.IsNullOrWhiteSpace(Model.Messaggio))
     {
-        <div class="row clear">
-            <div class="col-md-6">
-                <p class="alert alert-@(Model.IsSuccesso?"success":"danger")">@Html.Raw(Model.Messaggio)</p>
-            </div>
-        </div>
+        <p style="text-align:center" class="alert alert-@(Model.IsSuccesso?"success":"danger")">@Html.Raw(Model.Messaggio)</p>          
     }
 }
 

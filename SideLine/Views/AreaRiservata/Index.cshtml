@@ -4,32 +4,37 @@
     ViewBag.Title = "Area Riservata";
     Layout = "~/Views/Layout/Layout.cshtml";
 }
-<h2>@Model.LabelTitolo</h2>
+<h2>@Model.LabelTitolo</h2><br /><br />
 
 @using (Html.BeginForm("Index", "AreaRiservata", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
     <div class="row">
-        <div class="col-md-offset-12 col-md-12">
+        <div class="col-md-offset-5 col-md-5"></div>
+        <div class="col-md-offset-2 col-md-2">
             <div class="form-group">
-                <label for="Email">@Model.LabelEmail</label>
+                <label for="Email" style="font-weight:bold">@Model.LabelEmail</label>
                 @Html.TextBoxFor(t => t.Utente.Email, new { @class = "form-control fadeIn second", @readonly = "true", placeholder = Model.LabelEmail, type = "email" })
             </div>
         </div>
-    </div><br />
+    </div>
+    <br />
     <div class="row">
-        <div class="col-md-offset-12 col-md-12">
+        <div class="col-md-offset-5 col-md-5"></div>
+        <div class="col-md-offset-2 col-md-2">
             <div class="form-group">
-                <label class="form-check-label">@Model.LabelNome</label>
+                <label class="form-check-label" style="font-weight:bold">@Model.LabelNome</label>
                 @Html.TextBoxFor(t => t.Utente.Nome, new { @class = "form-control fadeIn second", placeholder = Model.LabelNome, maxlength = 255, @readonly = "true" })
             </div>
         </div>
-    </div><br />
+    </div>
+    <br />
     <div class="row">
-        <div class="col-md-offset-12 col-md-12">
+        <div class="col-md-offset-5 col-md-5"></div>
+        <div class="col-md-offset-2 col-md-2">
             <div class="form-group">
-                <label class="form-check-label">Squadra preferita</label>
+                <label class="form-check-label" style="font-weight:bold">Squadra preferita</label>
                 @Html.TextBoxFor(t => t.Utente.FK_Societa_Sportiva, new { @class = "form-control fadeIn second", placeholder = "Squadra preferita", maxlength = 255, @readonly = "true" })
             </div>
         </div>
@@ -38,7 +43,8 @@
     if (!string.IsNullOrWhiteSpace(Model.Messaggio))
     {
         <div class="row clear">
-            <div class="col-md-6">
+            <div class="col-md-offset-5 col-md-5"></div>
+            <div class="col-md-offset-2 col-md-2">
                 <p class="alert alert-@(Model.IsOk ? "success" : "danger")">@Html.Raw(Model.Messaggio)</p>
             </div>
         </div>
